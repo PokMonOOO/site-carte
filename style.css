@@ -1,5 +1,5 @@
 body {
-    background-color: bisque;
+    background-color: rgb(211, 160, 65);
 }
 
 /* HEAD */
@@ -54,7 +54,6 @@ header {
 .acceuil {
     width: 100%;
     height: 900px;
-    background-color: rgb(193, 128, 9);
 }   
 .home-block {
     display: flex;
@@ -95,7 +94,6 @@ header {
 .jolie {
     width: 100%;
     height: 10vh;
-    background-color: rgb(193, 128, 9);
 }
 .jolie2 {
     width: 1100px;
@@ -107,7 +105,6 @@ header {
 main {
     width: 100%;
     height: 120vh;
-    background-color: rgb(193, 128, 9);
 }
 main section {
     display: flex;
@@ -131,4 +128,16 @@ main section {
     align-items: center;
     width: 90%;
     height: 80%;
+}
+/* VIDEO */
+.video-out {
+    width: 100%;
+    height: 800px;
+}
+.video-in {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    background-color: black;
+    border-radius: 25px;
 }
