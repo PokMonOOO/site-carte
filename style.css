@@ -1,0 +1,134 @@
+body {
+    background-color: bisque;
+}
+
+/* HEAD */
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(151, 80, 0);
+}
+.lead {
+    display: flex;
+    justify-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.lead p {
+    font-size: 32px;
+    color: black;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+}
+.logo {
+    padding-left: 100px;
+}
+.home, .discover, .video, .contact {
+    height: 100%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 32px;
+}
+
+/* ANNEXE */
+
+.big_card {
+    width: 500px;
+    height: 500px;
+    border-radius: 25px;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+}
+
+/* HOME */
+
+.acceuil {
+    width: 100%;
+    height: 900px;
+    background-color: rgb(193, 128, 9);
+}   
+.home-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 700px;
+    margin-top: 10vh;
+    background-color: white;
+    border-radius: 25px;
+}
+.home_card {
+    display: flex;
+    align-items: column;
+    width: 35%;
+    height: 80vh;
+}
+.home_card_desc {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.home_card h1 {
+    font-size: 42px;
+    color: black;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+.home_card h2 {
+    font-size: 24px;
+    color: black;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+/* JOLIE */
+.jolie {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(193, 128, 9);
+}
+.jolie2 {
+    width: 1100px;
+    height: 30px;
+    background-color: rgb(151, 80, 0);  
+}
+
+/* AUTRE A DECOUVRIR */
+main {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(193, 128, 9);
+}
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65%;
+    height: 80%;
+    margin-bottom: 10vh;
+    background-color: white;
+    border-radius: 25px;
+}
+.main_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px 40px;
+    justify-items: center; 
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+}
