@@ -7,13 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="base.css">
+  <script src="script.js"></script>
   <title>Nouveau fichier</title>
 </head>
 
 <body>
   <!-- HEADER -->
   <header>
-    <a href="#home"><div class="logo"><img src="favcon.png" alt="logo" class="icon" style="width: 70px; height: 70px;"></div></a>
+    <a href="./favcon.png" target="_blank"><div class="logo"><img src="favcon.png" alt="logo" class="icon" style="width: 70px; height: 70px;"></div>
+</a>
     <div class="lead">
       <a href="#home"><div class="home center"><p>Home</p></div></a>
       <a href="#discover"><div class="discover center"><p>Découvrir</p></div></a>
@@ -24,10 +26,28 @@
 <!-- HOME -->
   <section class="acceuil center" id="home">
     <div class="home-block">
-      <div class="home_card center"><img src="./src/red_card/carte monstres_Plan de travail 1 copie 46.png" alt="carte_monstre" class="big_card"></div>
+<div class="slideshow-container">
+
+<div class="mySlides" style="display: block;">
+  <img src="src/red_card/carte monstres_Plan de travail 1 copie 46.png">
+</div>
+
+<div class="mySlides">
+  <img src="src/red_card/carte monstres_Plan de travail 1 copie 38.png">
+</div>
+
+<div class="mySlides">
+  <img src="src/red_card/carte monstres_Plan de travail 1 copie 51.png">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+      <!-- CARD DESC -->
       <div class="home_card home_card_desc center">
-        <h1>Bélier du Sang Ancien</h1>
-        <h2>On raconte qu’au cœur des montagnes écarlates vit l’esprit d’un bélier millénaire, marqué par les guerres des dieux. Sa corne brisée est devenue le symbole d’un peuple oublié qui scella son essence dans des rituels interdits. Chaque fois qu’un guerrier invoque son pouvoir, le cri du Bélier du Sang Ancien résonne comme un écho de rage et de sacrifice.
+        <h1 id="cardTitle">Bélier du Sang Ancien</h1>
+        <h2 id="cardDescription">On raconte qu’au cœur des montagnes écarlates vit l’esprit d’un bélier millénaire, marqué par les guerres des dieux. Sa corne brisée est devenue le symbole d’un peuple oublié qui scella son essence dans des rituels interdits. Chaque fois qu’un guerrier invoque son pouvoir, le cri du Bélier du Sang Ancien résonne comme un écho de rage et de sacrifice.
 
 <br><br>Certains affirment que vaincre cette créature n’apporte pas seulement des trésors… mais aussi une part de sa malédiction.</h2>
       </div>
@@ -39,7 +59,7 @@
   </div>
 <!-- AUTRE A DECOUVRIR -->
   <main class="center">
-    <section>
+    <section id="discover">
       <h1>Autre à découvrir</h1>
       <div class="main_card">
         <img src="./src/red_card/carte monstres_Plan de travail 1 copie 22.png" alt="red_card" class="card">
@@ -56,9 +76,12 @@
   </main>
   <!-- VIDEO -->
    <div class="video-out" id="video">
-    <div class="video-in">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=6vwFnKLamKY"></iframe>
+    <div class="video-in center">
+      <div class="tenor-gif-embed" data-postid="15917688480583893863" data-share-method="host" data-aspect-ratio="1" data-width="46%"></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     </div>
    </div>
-  
+  <!-- FOOTER -->
+   <footer class="center" id="contact">
+    ©Nouveau fichier
+   </footer>
 </body>
