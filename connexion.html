@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favcon.png" type="image/png">
+  <link rel="icon" href="favcon.png" sizes="32x32">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <script src="script.js"></script>
+  <title>Nouveau fichier</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="./favcon.png" target="_blank"><div class="logo"><img src="favcon.png" alt="logo" class="icon" style="width: 70px; height: 70px;"></div>
+</a>
+    <div class="lead">
+      <a href="index.html#home"><div class="home center"><p>Home</p></div></a>
+      <a href="index.html#discover"><div class="discover center"><p>Découvrir</p></div></a>
+      <a href="index.html#video"><div class="video center"><p>Vidéo</p></div></a>
+      <a href="index.html#contact"><div class="contact center"><p>Contact</p></div></a>
+      <div class="lead-end">
+      <a href="connexion.html" class="connexion">Connexion</a>
+      <a href="inscription.html" class="Inscription">Inscription</a>
+      </div>
+    </div>
+  </header>
+<section class="connexion-page center" id="connexion">
+    <h1 class="center">Connexion</h1>
+    <form class="connexion-form">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Se connecter</button>
+        <!-- SCRIPT POUR REDIRIGER VERS ERREUR -->
+        <script>
+    const form = document.querySelector('.connexion-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        redirectToError();
+    });
+    function redirectToError() {
+        window.location.href = "erreur.html";
+    }
+</script>
+    </form>
+</section>
+  <!-- FOOTER -->
+   <footer class="center" id="contact" style="position: fixed; top: 94%;">
+    ©Nouveau fichier
+   </footer>
+</body>

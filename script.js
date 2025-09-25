@@ -1,4 +1,3 @@
-// Define your card data (titles and descriptions)
 const cardData = [
   {
     title: "Bélier du Sang Ancien",
@@ -45,4 +44,10 @@ function showSlides(n) {
   // Update the title and description
   cardTitle.textContent = cardData[slideIndex - 1].title;
   cardDescription.textContent = cardData[slideIndex - 1].description;
+}
+
+// REDIRIGER VERS ERREUR
+function redirectToError() {
+    // Redirige l'utilisateur vers la page erreur.html
+    window.location.href = "erreur.html";
 }
