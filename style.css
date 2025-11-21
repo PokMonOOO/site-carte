@@ -1,6 +1,20 @@
 body {
-    background-color: rgb(211, 160, 65);
+    --BG: rgb(211, 160, 65);
+    background-color: var(--BG);
+    --headerColor: rgb(151, 80, 0);
+    --black: black;
+    --white: white;
+    --slide: rgba(0, 0, 0, 0.315);
+
 }
+body.dark {
+    --BG: rgb(104, 8, 8);
+    --headerColor: rgb(54, 7, 7);
+    --black: white;
+    --white: black;
+    --slide: rgba(255, 255, 255, 0.831);
+}
+
 
 /* HEAD */
 
@@ -12,7 +26,7 @@ header {
     z-index: 10;
     width: 100%;
     height: 80px;
-    background-color: rgb(151, 80, 0);
+    background-color: var(--headerColor);
 }
 .lead {
     display: flex;
@@ -22,7 +36,7 @@ header {
 }
 .lead p {
     font-size: 32px;
-    color: black;
+    color: var(--black);
     margin-left: 1.5vw;
     margin-right: 1.5vw;
 }
@@ -52,7 +66,7 @@ transform: scale(15) translate(20%, 40%)
     font-weight: 500;
 }
 .home:hover, .discover:hover, .video:hover, .contact:hover, .connexion:hover, .Inscription:hover {
-    background-color: rgb(211, 160, 65);
+    background-color: var(--headerColor);
     border-radius: 15px;
     cursor: pointer;
 }
@@ -61,7 +75,7 @@ transform: scale(15) translate(20%, 40%)
     justify-items: flex-end;
     align-items: center;
     font-weight: 700;
-    color: black;
+    color: var(--black);
     height: 100%;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -117,16 +131,16 @@ transform: scale(15) translate(20%, 40%)
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: var(--white);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.315);
+  background-color: var(--slide);
 }
 .prev:hover, .next:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--black);
 }
 .next {
   right: 0;
@@ -139,7 +153,7 @@ transform: scale(15) translate(20%, 40%)
     width: 80%;
     height: 700px;
     margin-top: 10vh;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 25px;
 }
 .card-container {
@@ -157,12 +171,12 @@ transform: scale(15) translate(20%, 40%)
 }
 .home_card h1 {
     font-size: 42px;
-    color: black;
+    color: var(--black);
     margin-top: 2vh;
 }
 .home_card h2 {
     font-size: 24px;
-    color: black;
+    color: var(--black);
     margin-top: 2vh;
     font-weight: 500;
 }
@@ -175,7 +189,7 @@ transform: scale(15) translate(20%, 40%)
 .jolie2 {
     width: 1100px;
     height: 30px;
-    background-color: rgb(151, 80, 0);  
+    background-color: var(--BG);  
 }
 
 /* AUTRE A DECOUVRIR */
@@ -191,7 +205,8 @@ main section {
     width: 65%;
     height: 80%;
     margin-bottom: 10vh;
-    background-color: white;
+    background-color: var(--white);
+    color: var(--black);
     border-radius: 25px;
 }
 .main_card {
@@ -223,7 +238,8 @@ main section {
 footer {
     width: 100%;
     height: 60px;
-    background-color: rgb(151, 80, 0);
+    background-color: var(--headerColor);
+    color: var(--black);
     font-size: 32px;
 }
 

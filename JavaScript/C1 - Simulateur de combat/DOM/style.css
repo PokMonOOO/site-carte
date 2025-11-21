@@ -1,0 +1,5 @@
+.darkBG {
+    --nig : black;
+    background-color: var(--nig);
+    color: var(--nig);
+}
