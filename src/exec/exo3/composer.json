@@ -1,0 +1,16 @@
+{
+    "name": "zlaur/exo3",
+    "autoload": {
+        "psr-4": {
+            "Zlaur\\Exo3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Laurent"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.10"
+    }
+}

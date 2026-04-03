@@ -1,0 +1,15 @@
+my.devinci.fr
+
+- interface et affichage
+- redirection vers d'autre pages
+
+
+
+
+
+back-end :
+- Il demande au serveur la liste d'article à afficher et images
+- Enregistre chaque connexion de l'utilisateur et IP
+- L'emploie du temps de l'utilisateur pour le charger
+
+- utilise plusieurs API de protection ou habillage comme Google Font API, Cloudflare et librairie JavaScript
