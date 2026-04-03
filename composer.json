@@ -1,0 +1,17 @@
+{
+    "name": "zlaur/nouveau-fichier",
+    "autoload": {
+        "psr-4": {
+            "Zlaur\\NouveauFichier\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pok"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.10",
+        "fakerphp/faker": "^1.24"
+    }
+}
