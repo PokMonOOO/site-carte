@@ -2,25 +2,17 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="favcon.png" type="image/png" />
     <link rel="icon" href="favcon.png" sizes="32x32" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="base.css" />
-
-    <title>Nouveau fichier</title>
+    <title>Connexion</title>
   </head>
 
   <body>
-    <!-- HEADER -->
     <header>
       <div class="logo">
-        <img
-          src="favcon.png"
-          alt="logo"
-          class="icon"
-          style="width: 70px; height: 70px"
-        />
+        <img src="favcon.png" alt="logo" style="width: 70px; height: 70px" />
       </div>
       <div class="lead">
         <a href="index.html#home"
@@ -29,69 +21,93 @@
         <a href="index.html#discover"
           ><div class="discover center"><p>Découvrir</p></div></a
         >
-        <a href="index.html#video"
-          ><div class="video center"><p>Vidéo</p></div></a
-        >
-        <a href="index.html#contact"
-          ><div class="contact center"><p>Contact</p></div></a
-        >
         <div class="lead-end">
           <a href="connexion.html" class="connexion">Connexion</a>
           <a href="inscription.html" class="Inscription">Inscription</a>
         </div>
       </div>
     </header>
-    <section class="connexion-page center" id="connexion">
-      <h1 class="center">Connexion</h1>
-      <form class="connexion-form">
-        <label for="username">Nom d'utilisateur :</label>
-        <input type="text" id="username" name="username" required />
 
-        <label for="password">Mot de passe :</label>
-        <input type="password" id="password" name="password" required />
+    <main class="inscription-page">
+      <section style="height: auto; padding: 40px">
+        <div class="home_card_desc">
+          <h1 style="text-align: center">Connexion</h1>
 
-        <button type="submit">Se connecter</button>
-        <!-- SCRIPT POUR REDIRIGER VERS ERREUR -->
-        <script>
-          const form = document.querySelector(".connexion-form");
+          <div
+            id="msg-erreur"
+            style="
+              color: #ff4444;
+              text-align: center;
+              font-weight: bold;
+              height: 25px;
+              margin-bottom: 10px;
+            "
+          ></div>
+        </div>
 
-          form.addEventListener("submit", function (event) {
-            event.preventDefault();
-            redirectToError();
-          });
-          function redirectToError() {
-            window.location.href = "erreur.html";
+        <form class="inscription-form" id="formLogin" style="height: auto">
+          <label for="username">Nom d'utilisateur ou email :</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password" style="margin-top: 20px">Mot de passe :</label>
+          <input type="password" id="password" name="password" required />
+
+          <button
+            type="submit"
+            class="home"
+            style="
+              border: none;
+              padding: 15px 30px;
+              margin-top: 30px;
+              cursor: pointer;
+              width: 100%;
+            "
+          >
+            Se connecter
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("formLogin")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+          const msgDiv = document.getElementById("msg-erreur");
+
+          try {
+            const response = await fetch("src/login.php", {
+              method: "POST",
+              body: formData,
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+              window.location.href = "index.html";
+            } else {
+              msgDiv.innerText = result.message;
+            }
+          } catch (error) {
+            msgDiv.innerText = "Erreur de communication avec le serveur.";
           }
-        </script>
-      </form>
-    </section>
-    <!-- fakerphp -->
-    <div class="center" id="fake"></div>
-    <script type="text/javascript">
-      async function loadFaker() {
-        const url = `./src/faker.php`;
-
-        try {
-          const response = await fetch(url);
-
-          if (!response.ok) throw new Error("Erreur serveur");
-
-          const data = await response.json();
-
-          // Mise à jour du HTML
-          document.getElementById("fake").innerText = `Bonjour ${data.name}`;
-          console.log("Données reçues :", data);
-        } catch (error) {
-          console.error("Erreur lors du fetch :", error);
-        }
-      }
-      // force a reload le script sinon faut mettre en haut de la page
-      window.addEventListener("DOMContentLoaded", loadFaker);
+        });
     </script>
-    <!-- FOOTER -->
-    <footer class="center" id="contact" style="position: fixed; top: 94%">
+
+    <footer
+      class="center"
+      style="
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
       ©Nouveau fichier
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
